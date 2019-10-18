@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import LocationCard from "./LocationCard";
 import SearchForm from "./SearchForm";
+import { Link } from 'react-router-dom'
 import styled from "styled-components";
 
 const Main = styled.div `
@@ -60,7 +61,6 @@ export default function LocationsList() {
                 name= {location.name}
                 type = {location.type}
                 dimension = {location.dimension}
-                type = {location.status}
                 residents = {location.residents}
               />
             );

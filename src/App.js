@@ -6,9 +6,6 @@ import CharacterList from "./components/CharacterList";
 import WelcomePage from "./components/WelcomePage";
 import LocationList from "./components/LocationsList";
 
-
-
-
 export default function App() {
   return (
     <main>
