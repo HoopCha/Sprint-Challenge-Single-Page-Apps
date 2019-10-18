@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 
-export default function SearchForm({ onSearch }) {
+export default function SearchForm(props) {
   return (
-    <section className="search-form">
-      <form onSubmit={() => onSearch(name)}>
+    <section>
+      <form className="search">
         <input
-          onChange={handleInputChange}
-          placeholder="name"
-          value={name}
+          type="text"
+          onChange={props.handleInputChange}
+          value={props.query}
           name="name"
+          tabIndex="0"
+          className="prompt search-name"
+          placeholder="search by name"
+          autoComplete="off"
         />
-        <button type="submit">Search</button>
       </form>
     </section>
   );
