@@ -4,6 +4,7 @@ import Header from "./components/Header.js";
 
 import CharacterList from "./components/CharacterList";
 import WelcomePage from "./components/WelcomePage";
+import LocationList from "./components/LocationsList";
 
 
 
@@ -14,6 +15,7 @@ export default function App() {
       <Header />
       <Route exact path="/" component = {WelcomePage} />
       <Route path ="/character" component = {CharacterList} />
+      <Route path ="/location" component = {LocationList} />
     </main>
   );
 }

@@ -42,7 +42,7 @@ export default function Header() {
         <StyledLink to="/character">Character List</StyledLink>
         </div>
         <div>
-        <StyledLink to="/contact">Location List</StyledLink>
+        <StyledLink to="/location">Location List</StyledLink>
         </div>
     </Main>
     </header>
