@@ -2,6 +2,21 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import SearchForm from "./SearchForm";
+import styled from "styled-components";
+
+const Main = styled.div `
+display:flex;
+flex-wrap: wrap;
+justify-content:space-evenly;
+padding-bottom: 20px;
+`
+
+const Search = styled.div `
+display:flex;
+justify-content:center;
+margin: 10px;
+`
+
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -17,6 +32,7 @@ export default function CharacterList() {
         const character = response.data.results.filter(character =>
           character.name.toLowerCase().includes(query.toLowerCase())
         );
+        console.log(character)
         setCharacter(character);
       })
       .catch(error => {
@@ -30,10 +46,13 @@ export default function CharacterList() {
 
   return (
       <div>
+        <Search>
         <SearchForm
         handleInputChange = {handleInputChange}
         query = {query}
         />
+        </Search>
+        <Main>
   {character.map(character => {
             return (
               <CharacterCard
@@ -46,7 +65,7 @@ export default function CharacterList() {
               />
             );
           })}
-          
+        </Main>
       </div>
   )
   }
