@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: You don’t need to wait for a server to respond with content for your web page, so the page won’t have to refresh. The data has already been loaded onto the webpage from the server, so it will just be displayed when asked for. This usually results in a much faster webpage after the initial load. 
 
 ## Project Set Up
 
